@@ -1,0 +1,100 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Splash Screen */
+#splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+#splash-screen img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Vitals Page */
+#vitals-page, #history-page, #reminders-page {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* History Page */
+#history-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#history-page th, #history-page td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#history-page th {
+    background-color: #007bff;
+    color: white;
+}
+
+#history-page tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#history-page tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Reminders Page */
+#reminders-page button {
+    background-color: #28a745;
+}
+
+#reminders-page button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,14 @@
+<preference name="SplashScreen" value="screen" />
+<preference name="SplashScreenDelay" value="3000" />
+<preference name="FadeSplashScreenDuration" value="500" />
+<preference name="AutoHideSplashScreen" value="true" />
+
+<platform name="android">
+    <splash src="img/splash-mdpi.png" density="port-mdpi" />
+    <splash src="img/splash-hdpi.png" density="port-hdpi" />
+    <splash src="img/splash-xhdpi.png" density="port-xhdpi" />
+</platform>
+
+<platform name="ios">
+    <splash src="img/splash.png" width="2732" height="2732" />
+</platform>
