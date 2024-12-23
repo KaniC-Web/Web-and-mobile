@@ -1,50 +1,74 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Vitals Check</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="img/splash.png" alt="Splash Screen">
+        <h1>Daily Vitals Check</h1>
+    </div>
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    <!-- Vitals Input Page -->
+    <div id="vitals-page" class="hidden">
+        <h2>Log Your Vitals</h2>
+        <form id="vitals-form">
+            <label for="heart-rate">Heart Rate (bpm):</label>
+            <input type="number" id="heart-rate" name="heartRate" required>
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+            <label for="blood-pressure">Blood Pressure (mmHg):</label>
+            <input type="text" id="blood-pressure" name="bloodPressure" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" readonly>
+
+            <button type="button" id="get-location">Get Location</button>
+            <button type="submit">Save Vitals</button>
+        </form>
+    </div>
+
+    <!-- History Page -->
+    <div id="history-page" class="hidden">
+        <h2>Vitals History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Heart Rate</th>
+                    <th>Blood Pressure</th>
+                    <th>Weight</th>
+                    <th>Notes</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- History entries will go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Reminders Page -->
+    <div id="reminders-page" class="hidden">
+        <h2>Set Reminders</h2>
+        <form id="reminders-form">
+            <label for="reminder-time">Reminder Time:</label>
+            <input type="time" id="reminder-time" name="reminderTime" required>
+            <button type="submit">Set Reminder</button>
+        </form>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/reminders.js"></script>
+</body>
 </html>
