@@ -8,6 +8,7 @@ const remindersPage = document.getElementById('reminders-page');
 
 setTimeout(() => {
     splashScreen.classList.add('hidden');
+    splashScreen.style.display('none')
     vitalsPage.classList.remove('hidden');
 }, 3000); // Splash screen delay
 
