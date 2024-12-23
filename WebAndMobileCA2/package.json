@@ -12,12 +12,24 @@
   ],
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "cordova-android": "^13.0.0"
-  },
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-contacts": {}
+    }
+  },
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-camera": "^8.0.0",
+    "cordova-plugin-contacts": "^3.0.1",
+    "cordova-plugin-geolocation": "^5.0.0"
   }
 }
